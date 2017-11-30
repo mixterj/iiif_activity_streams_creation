@@ -16,7 +16,7 @@ import time
 #  to run the script (bare minimum arguments) ...
 #  python create-activity-stream.py -collection_url [url] -modified_field [metadata field]  
 #  e.g.,
-#  python create-activity-stream.py -collection_url 'https://d.lib.ncsu.edu/collections/catalog/manifest?f%5Bformat%5D%5B%5D=Still+image&q=basketball' -modified_field 'dcterms:modified'
+#  python create-activity-stream.py -collection_url 'https://d.lib.ncsu.edu/collections/catalog/manifest?f%5Btopic_facet%5D%5B%5D=Sports' -modified_field 'dcterms:modified'
 
 def main():
     
