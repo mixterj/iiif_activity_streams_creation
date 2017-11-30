@@ -3,9 +3,6 @@ import sys, getopt, os, json, time, datetime
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk, streaming_bulk
 
-# set UTF-8 encoding
-reload(sys)
-sys.setdefaultencoding('UTF8')
 es = Elasticsearch(timeout=60)
 
 # set variables
@@ -20,7 +17,6 @@ index_name = "activity_streams"
 doc_type = "activities"
 
 # the directory that holds the file or files of input data
-# datapath = "cdm/"+doc_type
 datapath = "activities/"
 
 # elasticsearch shards and replicas
@@ -120,10 +116,4 @@ for f in os.listdir(datapath):
     # after processing all lines in the file, if there are any left-over actions in the actions list, load them
     if len(actions) > 0:
       bulk(es, actions)
-  
-  #print("Reading finished for %s/%s" % (datapath,f))
-    
-  #print("Bulk update started for  %s/%s" % (datapath,f))
-  #bulk(es, actions)
-  #print("Bulk update finished for  %s/%s" % (datapath,f))
 
