@@ -12,6 +12,5 @@ This is a proof of concept and provided 'as is'.
 * [ElasticSearch](https://www.elastic.co/products/elasticsearch)
 
 ## Usage
-* run create-activity-stream.py to create Activity Streams data
-* run loader.py to load Activity Streams data into ElasticSearch
-
+* run create-activity-stream.py to create Activity Streams data - see documentation in the script for required parameters
+* run loader.py to load Activity Streams data into ElasticSearch - see documentation in the script for required configurations
