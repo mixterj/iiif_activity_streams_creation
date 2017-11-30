@@ -11,7 +11,7 @@ es = Elasticsearch(timeout=60)
 # set variables
 
 # set to True if the input data files are tab-delimited, with a record key in position 0 and a json string in position 1
-keys_in_datafile = False
+keys_in_datafile = True
 
 # the elasticsearch index name
 index_name = "activity_streams"
@@ -28,9 +28,8 @@ shards = 1
 replicas = 2
 
 # the mapping file ... leave blank to let Elasticsearch create its own mapping based on the input data
-# mapping_file = "Merged-Recon/reconciliation_mapping.json"
-# mapping_file = "cdm/mapping-"+doc_type+".json"
-mapping_file = "activities_mapping/activities_mapping.json"
+
+mapping_file = "mapping/activities_mapping.json"
 #mapping_file = ""
 
 # do you want to create a new index?  Set to True, otherwise False

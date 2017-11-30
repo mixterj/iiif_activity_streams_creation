@@ -1,0 +1,36 @@
+{
+	"activities": {
+		"properties": {
+			"actor": {
+				"type": "string",
+				"index": "not_analyzed"
+			},
+			"endTime": {
+				"type": "date",
+				"format": "strict_date_optional_time||epoch_millis"
+			},
+			"id": {
+				"type": "string",
+				"index": "not_analyzed"
+			},
+			"object": {
+				"properties": {
+					"id": {
+						"type": "string",
+						"index": "not_analyzed"
+					},
+					"type": {
+						"type": "string",
+						"index": "not_analyzed"
+					}
+				}
+			},
+			"summary": {
+				"type": "string"
+			},
+			"type": {
+				"type": "string"
+			}
+		}
+	}
+}
